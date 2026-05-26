@@ -18,22 +18,44 @@ public class NumbersGivenRange {
 
     // method 2 using formula
 
+    // public static void main(String[] args) {
+
+    // int a = 2;
+    // int b = 5;
+
+    // int sum = b * (b + 1) / 2 - a * (a + 1) / 2 + a;
+
+    // System.out.println("the sum is " + sum);
+
+    // // calculation behind this
+
+    // // 5*(5+1)/2 - 2*(2+1)/2
+
+    // // 30/2 - 6/2
+
+    // // 15 - 3 = 12 +2 = 14
+
+    // }
+
+    // method 3 using recursion
+
     public static void main(String[] args) {
 
-        int a = 2;
-        int b = 5;
+        int a = 5;
+        int b = 10;
 
-        int sum = b * (b + 1) / 2 - a * (a + 1) / 2 + a;
+        int sum = getSum(0, a, b);
 
-        System.out.println("the sum  is " + sum);
+        System.out.println("total sum " + sum);
+    }
 
-        // calculation behind this
+    static int getSum(int sum, int a, int b) {
 
-        // 5*(5+1)/2 - 2*(2+1)/2
+        if (a > b) {
+            return sum;
+        }
 
-        // 30/2 - 6/2
-
-        // 15 - 3 = 12 +2 = 14
+        return a + getSum(sum, a + 1, b);
 
     }
 
