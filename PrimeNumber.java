@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class PrimeNumber {
 
     // public static void main(String[] args) {
@@ -94,7 +97,9 @@ public class PrimeNumber {
 
     public static void main(String[] args) {
 
-        int pr = 29;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int pr = sc.nextInt();
 
         if (isPrime(pr)) {
             System.out.println(pr + " is an prime number");
@@ -117,7 +122,7 @@ public class PrimeNumber {
             return false;
         }
 
-        for (int i = 3; i <= Math.sqrt(i); i += 2) {
+        for (int i = 3; i <= Math.sqrt(pr); i += 2) {
             {
                 if (pr % i == 0) {
                     return false;
